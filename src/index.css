@@ -1,0 +1,81 @@
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  background: #fff7ed;
+  color: #1e293b;
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+
+html.dark {
+  background: #020617;
+  color: #f8fafc;
+}
+
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  background: #fff7ed;
+  color: #1e293b;
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dark body */
+.dark body {
+  background: #020617;
+  color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #f97316;
+  color: white;
+}
+
+html,
+body,
+button,
+a,
+section,
+header,
+footer,
+main,
+div {
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
